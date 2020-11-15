@@ -1,6 +1,8 @@
 package com.example.recycleviewdemo
 
+import android.content.Intent
 import android.util.Log
+import android.view.View
 import rx.Observable
 import rx.Subscriber
 import rx.android.schedulers.AndroidSchedulers
@@ -181,5 +183,10 @@ class MainActivity : BaseActivity() {
                 .observeOn(AndroidSchedulers.mainThread()).apply {
                     subscribe(subscriber)
                 }
+    }
+
+    fun buttonClick(view: View) {
+        val intent = Intent(this, SecondActivity::class.java)
+        startActivity(intent)
     }
 }

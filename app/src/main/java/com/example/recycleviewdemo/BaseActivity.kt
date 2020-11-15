@@ -19,9 +19,9 @@ abstract class BaseActivity : AppCompatActivity() {
         Logger.addLogAdapter(AndroidLogAdapter())
     }
 
+    protected abstract fun getContentViewId(): Int
     protected abstract fun initPresenter()
     protected abstract fun initView()
-    protected abstract fun getContentViewId(): Int
 
     fun setPresenter(presenter: BasePresenter) {
         mPresenter = presenter
