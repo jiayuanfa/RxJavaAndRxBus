@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.1"
 
     defaultConfig {
-        applicationId "com.example.recycleviewdemo"
+        applicationId "com.example.RxJavademo"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
