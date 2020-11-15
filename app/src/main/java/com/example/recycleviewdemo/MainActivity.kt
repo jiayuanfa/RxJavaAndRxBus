@@ -3,6 +3,9 @@ package com.example.recycleviewdemo
 import android.content.Intent
 import android.util.Log
 import android.view.View
+import com.example.recycleviewdemo.rxbus.MessageEvent
+import com.example.recycleviewdemo.rxbus.RxBusKotlin
+import kotlinx.android.synthetic.main.activity_main.*
 import rx.Observable
 import rx.Subscriber
 import rx.android.schedulers.AndroidSchedulers
@@ -29,7 +32,18 @@ class MainActivity : BaseActivity() {
     }
 
     override fun initView() {
-        zip()
+//        zip()
+        rxbus()
+    }
+
+    /**
+     * Rxbus监听
+     */
+    private fun rxbus() {
+        addSubscription(RxBusKotlin.toObservable(MessageEvent::class.java)
+            .subscribe{
+                textView.text = (it as MessageEvent).name
+            })
     }
 
     /**

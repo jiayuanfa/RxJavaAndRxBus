@@ -4,13 +4,19 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.Logger
+import rx.Subscription
+import rx.subscriptions.CompositeSubscription
+import java.util.concurrent.Flow
 
 abstract class BaseActivity : AppCompatActivity() {
 
     private var mPresenter: BasePresenter? = null
+    private var mRxCompositeSubscription: CompositeSubscription? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        mRxCompositeSubscription = CompositeSubscription()
 
         initPresenter()
         initView()
@@ -27,9 +33,14 @@ abstract class BaseActivity : AppCompatActivity() {
         mPresenter = presenter
     }
 
+    fun addSubscription(sub: Subscription) {
+        mRxCompositeSubscription!!.add(sub)
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         mPresenter?.unSubscribe()
+        mRxCompositeSubscription?.unsubscribe()
         Logger.t("fage").d("移除请求")
     }
 }
