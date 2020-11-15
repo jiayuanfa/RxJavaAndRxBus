@@ -1,10 +1,10 @@
-package com.example.recycleviewdemo
+package com.example.rxjavademo
 
 import android.content.Intent
 import android.util.Log
 import android.view.View
-import com.example.recycleviewdemo.rxbus.MessageEvent
-import com.example.recycleviewdemo.rxbus.RxBusKotlin
+import com.example.rxjavademo.rxbus.MessageEvent
+import com.example.rxjavademo.rxbus.RxBusKotlin
 import kotlinx.android.synthetic.main.activity_main.*
 import rx.Observable
 import rx.Subscriber

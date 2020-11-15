@@ -1,4 +1,4 @@
-package com.example.recycleviewdemo
+package com.example.rxjavademo
 
 import com.google.gson.Gson
 import com.orhanobut.logger.Logger

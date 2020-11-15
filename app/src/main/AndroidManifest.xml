@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.recycleviewdemo">
+    package="com.example.rxjavademo">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RecycleViewDemo">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.rxjavademo.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SecondActivity"
+        <activity android:name="com.example.rxjavademo.SecondActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
 

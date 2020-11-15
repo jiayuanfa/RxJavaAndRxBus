@@ -1,4 +1,4 @@
-package com.example.recycleviewdemo
+package com.example.rxjavademo
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,6 @@ import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.Logger
 import rx.Subscription
 import rx.subscriptions.CompositeSubscription
-import java.util.concurrent.Flow
 
 abstract class BaseActivity : AppCompatActivity() {
 

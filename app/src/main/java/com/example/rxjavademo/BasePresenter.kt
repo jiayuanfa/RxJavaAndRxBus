@@ -1,4 +1,4 @@
-package com.example.recycleviewdemo
+package com.example.rxjavademo
 
 import rx.Subscription
 import rx.subscriptions.CompositeSubscription

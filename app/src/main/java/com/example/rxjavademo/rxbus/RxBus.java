@@ -1,4 +1,4 @@
-package com.example.recycleviewdemo.rxbus;
+package com.example.rxjavademo.rxbus;
 
 import rx.Observable;
 import rx.subjects.PublishSubject;

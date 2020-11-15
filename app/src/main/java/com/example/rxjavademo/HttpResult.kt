@@ -1,4 +1,4 @@
-package com.example.recycleviewdemo
+package com.example.rxjavademo
 
 /**
  * 使用泛型进行返回

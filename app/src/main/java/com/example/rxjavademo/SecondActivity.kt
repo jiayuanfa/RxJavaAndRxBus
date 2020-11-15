@@ -1,7 +1,7 @@
-package com.example.recycleviewdemo
+package com.example.rxjavademo
 
-import com.example.recycleviewdemo.rxbus.MessageEvent
-import com.example.recycleviewdemo.rxbus.RxBusKotlin
+import com.example.rxjavademo.rxbus.MessageEvent
+import com.example.rxjavademo.rxbus.RxBusKotlin
 
 class SecondActivity : BaseActivity() {
     override fun getContentViewId(): Int {
