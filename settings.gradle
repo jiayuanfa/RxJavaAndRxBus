@@ -1,2 +1,2 @@
-rootProject.name = "RecycleViewDemo"
+rootProject.name = "RxJavaDemo"
 include ':app'
